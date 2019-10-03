@@ -120,6 +120,8 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
+.DS_Store
 .pyre/
-.idea/vcs.xml
+.idea/
+.idea/workspace.xml
 .idea/workspace.xml
