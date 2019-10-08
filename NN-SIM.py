@@ -123,7 +123,7 @@ def NN_SIM(ID):
     loss_op = MSE + regularization  # add up both losses
 
     # define optimizer
-    optimizer = tf.train.AdamOptimizer(learning_rate=0.05, beta1=0.9, beta2=0.999, epsilon=1) #0.05; 0.9; 0.99; 1
+    optimizer = tf.train.AdamOptimizer(learning_rate=0.05, beta1=0.9, beta2=0.999, epsilon=1) #0.05; 0.9; 0.999; 1
     train_op = optimizer.minimize(loss_op)
 
     saver = tf.train.Saver()
@@ -204,8 +204,8 @@ def NN_SIM(ID):
 ## Make Changes ...................................................................
 
 n_ensembles = 50        # initialize number of ensemble members                                         #50
-training_epochs = 15000 # how often we iterate over our samples. Set to 0 if NN-SIM is already trained  #10000
-batch_size = 100        # how many samples we average over before updating NN-SIM weights, biases.      # 100
+training_epochs = 15000 # how often we iterate over our samples. Set to 0 if NN-SIM is already trained  #15000
+batch_size = 100        # how many samples we average over before updating NN-SIM weights, biases.      #100
 display_step = 40      # parameter for print/update
 No_samples = 2000       # Number of samples we randomly choose from the complete training-set           #2000
 Noise_IO = False        # Apply Noise to solar proxies, SSI and TSI
